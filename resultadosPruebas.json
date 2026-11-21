@@ -1,0 +1,110 @@
+{
+ "PR-01": {
+  "descripcion": "Ruta dentro de Corrientes (San Lorenzo y 3 de Abril -> Lavalle y Costanera)",
+  "esperado": "Igual a networkx (2460.2 m)",
+  "obtenido": "2460.2 m en 4 tramos",
+  "ok": true
+ },
+ "PR-02": {
+  "descripcion": "Ruta dentro de Resistencia (Perón y Cangallo -> Gral. Mansilla y Julio A. Roca)",
+  "esperado": "Igual a networkx (1764.5 m)",
+  "obtenido": "1764.5 m en 5 tramos",
+  "ok": true
+ },
+ "PR-03": {
+  "descripcion": "Ruta de Corrientes a Resistencia (debe cruzar el Puente General Belgrano)",
+  "esperado": "Igual a networkx y pasa por el puente",
+  "obtenido": "20699.9 m; puente: True",
+  "ok": true
+ },
+ "PR-04": {
+  "descripcion": "Sentido de circulación: la vuelta Resistencia -> Corrientes no tiene por qué medir igual",
+  "esperado": "Ida distinta de vuelta",
+  "obtenido": "ida 20700 m, vuelta 21046 m",
+  "ok": true
+ },
+ "PR-05": {
+  "descripcion": "Normalización: 'PERON'+'cangallo' frente a 'Perón'+'CANGALLO'",
+  "esperado": "Misma esquina",
+  "obtenido": "True",
+  "ok": true
+ },
+ "PR-06": {
+  "descripcion": "Desambiguación: San Martín y Pellegrini existe en ambas ciudades",
+  "esperado": "Dos ciudades",
+  "obtenido": "['Corrientes', 'Resistencia']",
+  "ok": true
+ },
+ "PR-06b": {
+  "descripcion": "Desambiguación: elegir la opción 2 devuelve la esquina de la segunda ciudad",
+  "esperado": "Esquina de Corrientes",
+  "obtenido": "Corrientes",
+  "ok": true
+ },
+ "PR-07": {
+  "descripcion": "Grafo chico: A -> D por B (100+100) y no por C (50+300)",
+  "esperado": "200 m",
+  "obtenido": "200.0 m",
+  "ok": true
+ },
+ "PR-07b": {
+  "descripcion": "Mano única: D -> C debe rodear (D->B->A->C = 100+100+50)",
+  "esperado": "250 m",
+  "obtenido": "250.0 m",
+  "ok": true
+ },
+ "PR-08": {
+  "descripcion": "Caso límite: destino sin conexión (Z aislado)",
+  "esperado": "Distancia infinita",
+  "obtenido": "inf",
+  "ok": true
+ },
+ "PR-09": {
+  "descripcion": "Caso límite: origen = destino",
+  "esperado": "0 m",
+  "obtenido": "0 m",
+  "ok": true
+ },
+ "PR-10": {
+  "descripcion": "Eliminar el tramo B->A (primer tramo listado de B) y no su sentido contrario",
+  "esperado": "A->B sigue existiendo",
+  "obtenido": "B->A existe: False; A->B existe: True",
+  "ok": true
+ },
+ "PR-11": {
+  "descripcion": "Eliminar la esquina B: A -> D debe ir por C (50+300)",
+  "esperado": "350 m y B ya no está en el grafo",
+  "obtenido": "350.0 m; B en el grafo: False",
+  "ok": true
+ },
+ "PR-12": {
+  "descripcion": "pedirSiNo: rechaza 'x' y '' y acepta 'N' (mayúscula)",
+  "esperado": "False",
+  "obtenido": "False",
+  "ok": true
+ },
+ "PR-12b": {
+  "descripcion": "pedirEsquina: calle inexistente y luego primera calle vacía",
+  "esperado": "Mensaje de error y cancelación (None)",
+  "obtenido": "None",
+  "ok": true
+ },
+ "PR-12c": {
+  "descripcion": "cargarDatos con archivo inexistente",
+  "esperado": "None sin excepción",
+  "obtenido": "None",
+  "ok": true
+ },
+ "PR-13": {
+  "descripcion": "Validación cruzada: Dijkstra contra Bellman-Ford desde 15 orígenes a todos los nodos",
+  "esperado": "0 diferencias",
+  "obtenido": "166860 pares comparados, 0 diferencias",
+  "ok": true
+ },
+ "PR-14": {
+  "descripcion": "Rendimiento: ruta de Corrientes a Resistencia sobre 11124 nodos",
+  "esperado": "Menos de 2 segundos",
+  "obtenido": "0.004 s por consulta",
+  "ok": true
+ }
+}
