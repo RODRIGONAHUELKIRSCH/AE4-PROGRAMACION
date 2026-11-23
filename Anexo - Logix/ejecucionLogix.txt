@@ -1,0 +1,1131 @@
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 3
+Primero cargue los módulos (opción 1 o 2).
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 99
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 1
+Nombre del archivo (Enter = modulosLogix.json): 
+Se cargaron 9 módulos: ['PED', 'CLI', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 3
+
+Matriz de adyacencia A
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    0    1    0    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    0    1    0    0    0    0    0
+  ROB     0    0    1    0    0    0    0    0    0
+  ASG     0    0    1    0    0    1    0    0    0
+  RUT     0    0    0    0    0    0    1    0    0
+  SEG     0    0    0    0    1    0    0    0    0
+  ENT     1    0    0    0    0    0    1    0    0
+  REP     1    0    1    0    0    0    0    1    0
+
+Grados de cada módulo (RF-07 a RF-13)
+  PED -> entrada: 2  salida: 3
+  CLI -> entrada: 1  salida: 0
+  INV -> entrada: 4  salida: 1
+  ROB -> entrada: 1  salida: 1
+  ASG -> entrada: 2  salida: 2
+  RUT -> entrada: 1  salida: 1
+  SEG -> entrada: 2  salida: 1
+  ENT -> entrada: 1  salida: 2
+  REP -> entrada: 0  salida: 3
+Ranking de criticidad (grado de entrada, burbuja): INV(4) PED(2) ASG(2) SEG(2) CLI(1) ROB(1) RUT(1) ENT(1) REP(0) 
+Ranking de acoplamiento (grado de salida, selección): PED(3) REP(3) ASG(2) ENT(2) INV(1) RUT(1) SEG(1) ROB(1) CLI(0) 
+Más crítico (mayor grado de entrada): ['INV']
+Más acoplado (mayor grado de salida): ['PED', 'REP']
+Se pueden eliminar sin afectar a otro (grado de entrada 0): ['REP']
+
+A^2 (dependencias indirectas de longitud 2)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    0    1    1    0    1    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    0    0    0    0    0    0
+  ROB     0    0    0    1    0    0    0    0    0
+  ASG     0    0    0    1    0    0    1    0    0
+  RUT     0    0    0    0    1    0    0    0    0
+  SEG     0    0    1    0    0    1    0    0    0
+  ENT     0    1    1    0    2    0    0    0    0
+  REP     1    1    1    1    1    0    1    0    0
+
+Matriz de alcanzabilidad A* (Warshall)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    1    1    1    1    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    1    0    0    0    0    0
+  ROB     0    0    1    1    0    0    0    0    0
+  ASG     0    0    1    1    1    1    1    0    0
+  RUT     0    0    1    1    1    1    1    0    0
+  SEG     0    0    1    1    1    1    1    0    0
+  ENT     1    1    1    1    1    1    1    0    0
+  REP     1    1    1    1    1    1    1    1    0
+
+Si se modifica cada módulo, pueden verse afectados (lectura por columna):
+  PED -> ['ENT', 'REP']
+  CLI -> ['PED', 'ENT', 'REP']
+  INV -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ROB -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ASG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  RUT -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  SEG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ENT -> ['REP']
+  REP -> []
+Pares alcanzables (unos de A*): 40 - densidad: 49.4 % de 81
+Módulos en dependencias circulares (RF-17 a RF-19): ['INV', 'ROB', 'ASG', 'RUT', 'SEG']
+Grupos de módulos en el mismo ciclo: [['INV', 'ROB'], ['ASG', 'RUT', 'SEG']]
+Orden de migración: no existe porque hay ciclos.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 4
+Módulos que se modifican (separados por espacio): INV ROB
+Alcance directo: 2 módulo(s)
+Impacto según A*: 8 módulo(s): ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 8
+Código del módulo a consultar: INV
+Módulo INV
+  Grado de entrada: 4 (puesto 1 de 9 en criticidad)
+  Grado de salida : 1 (puesto 5 de 9 en acoplamiento)
+  Si se modifica pueden verse afectados: ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  Está en una dependencia circular.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 8
+Código del módulo a consultar: XYZ
+El módulo XYZ no existe en el sistema cargado.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 5
+¿Cargar el sistema desde archivo (a) o por teclado (t)? a
+Nombre del archivo (Enter = sistemaTabla6.json): 
+det(M) = 11
+  F1 <-> F2
+  F2 <- F2 - 2 * F1
+  F3 <- F3 - 3 * F1
+  F2 <- -F2
+  F1 <- F1 - 2 * F2
+  F3 <- F3 + 5 * F2
+  F3 <- F3 / 11
+  F1 <- F1 + 4 * F3
+  F2 <- F2 - 3 * F3
+El sistema es compatible determinado
+  Incógnita 1 = 12
+  Incógnita 2 = 20
+  Incógnita 3 = 35
+  Verificación ecuación 1 : 119 = 119
+  Verificación ecuación 2 : 122 = 122
+  Verificación ecuación 3 : 126 = 126
+¿Calcular un costo con estos valores? Ingrese las cantidades (Enter para no): 4 6 3
+Costo = vector de cantidades · vector solución = 273
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 6
+¿Cargar las alternativas desde archivo (a) o por teclado (t)? a
+Nombre del archivo (Enter = costosAlternativas.json): 
+  A y B -> n = 4.2 años, costo = 462
+  A y C -> n = 6 años, costo = 660
+  B y C -> n = 29.4 años, costo = 1596
+¿Comparar en algún año? Ingrese los años separados por espacio (Enter para no): 3 5 10
+  Año 3: A = 330  B = 408  C = 540  -> más económica: A
+  Año 5: B = 498  A = 550  C = 620  -> más económica: B
+  Año 10: B = 723  C = 820  A = 1100  -> más económica: B
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 7
+Nombre del archivo (Enter = redDistribucion.json): 
+Vértice de origen: D
+Vértice de destino: Z3
+
+Matriz de pesos W (minutos)
+          D   H1   H2   Z1   Z2   Z3
+    D     0    8    5  inf  inf  inf
+   H1     8    0    2    6  inf  inf
+   H2     5    2    0   10    7  inf
+   Z1   inf    6   10    0    3    9
+   Z2   inf  inf    7    3    0    4
+   Z3   inf  inf  inf    9    4    0
+
+  Etapa 1 : se fija D con distancia 0
+     se actualiza H1 a 8 (viniendo de D)
+     se actualiza H2 a 5 (viniendo de D)
+  Etapa 2 : se fija H2 con distancia 5
+     se actualiza H1 a 7 (viniendo de H2)
+     se actualiza Z1 a 15 (viniendo de H2)
+     se actualiza Z2 a 12 (viniendo de H2)
+  Etapa 3 : se fija H1 con distancia 7
+     se actualiza Z1 a 13 (viniendo de H1)
+  Etapa 4 : se fija Z2 con distancia 12
+     se actualiza Z3 a 16 (viniendo de Z2)
+  Etapa 5 : se fija Z1 con distancia 13
+  Etapa 6 : se fija Z3 con distancia 16
+Camino mínimo: D - H2 - Z2 - Z3 = 16
+Ruta fija para comparar (vértices separados por espacio, Enter para omitir): D H1 Z1 Z3
+Ruta fija: D - H1 - Z1 - Z3 = 23
+Ahorro del camino mínimo: 7 minutos
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 7
+Nombre del archivo (Enter = redDistribucion.json): redConDrones.json
+Vértice de origen: D
+Vértice de destino: Z3
+
+Matriz de pesos W (minutos)
+          D   H1   H2   Z1   Z2   Z3
+    D     0    8    5  inf  inf   14
+   H1     8    0    2    6  inf  inf
+   H2     5    2    0   10    7  inf
+   Z1   inf    6   10    0    3    9
+   Z2   inf  inf    7    3    0    4
+   Z3    14  inf  inf    9    4    0
+
+  Etapa 1 : se fija D con distancia 0
+     se actualiza H1 a 8 (viniendo de D)
+     se actualiza H2 a 5 (viniendo de D)
+     se actualiza Z3 a 14 (viniendo de D)
+  Etapa 2 : se fija H2 con distancia 5
+     se actualiza H1 a 7 (viniendo de H2)
+     se actualiza Z1 a 15 (viniendo de H2)
+     se actualiza Z2 a 12 (viniendo de H2)
+  Etapa 3 : se fija H1 con distancia 7
+     se actualiza Z1 a 13 (viniendo de H1)
+  Etapa 4 : se fija Z2 con distancia 12
+  Etapa 5 : se fija Z1 con distancia 13
+  Etapa 6 : se fija Z3 con distancia 14
+Camino mínimo: D - Z3 = 14
+Ruta fija para comparar (vértices separados por espacio, Enter para omitir): 
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 10
+Nombre del archivo (Enter = decisionAlternativas.json): 
+
+Criterios
+  C1 - Costo total - peso 0.25
+  C2 - Riesgo - peso 0.2
+  C3 - Mantenibilidad - peso 0.15
+  C4 - Evolucion - peso 0.25
+  C5 - Conocimiento - peso 0.15
+
+Matriz de puntajes P (1 a 5)
+         C1   C2   C3   C4   C5
+    A     2    3    1    1    5
+    B     4    3    4    4    4
+    C     3    1    5    5    1
+
+v = P . w -> A = 2.25  B = 3.8  C = 3.1  
+Orden (selección): B (3.8) > C (3.1) > A (2.25)
+Escenario 'Prioridad a la evolucion': B (3.85) > C (3.5) > A (2.05) -> la recomendación se mantiene
+Sensibilidad: peso a partir del cual otra alternativa supera a B
+  si el peso de C3 supera 50.0 % -> C pasa a B (hoy: 15.0 %)
+  si el peso de C4 supera 55.9 % -> C pasa a B (hoy: 25.0 %)
+  si el peso de C5 supera 66.7 % -> A pasa a B (hoy: 15.0 %)
+Criterio y nuevo peso para probar (por ejemplo C4 0.5; Enter para omitir): C4 0.5
+Con C4 = 0.5 y el resto en proporción: B (58/15 ≈ 3.8667) > C (56/15 ≈ 3.7333) > A (11/6 ≈ 1.8333)
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 11
+Nombre del archivo (Enter = incidenciaSolicitudes.json): 
+
+Matriz de incidencia S (solicitudes x módulos)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+   s1     1    0    0    0    1    0    0    0    0
+   s2     1    1    0    0    0    0    0    0    0
+   s3     0    0    0    0    1    1    1    1    0
+   s4     0    0    1    1    0    0    0    0    0
+   s5     0    0    0    0    0    0    0    0    1
+   s6     0    0    0    0    1    1    1    0    1
+
+S . S^T (diagonal = alcance directo; fuera de la diagonal = módulos compartidos)
+         s1   s2   s3   s4   s5   s6
+   s1     2    1    1    0    0    1
+   s2     1    2    0    0    0    0
+   s3     1    0    4    0    0    3
+   s4     0    0    0    2    0    0
+   s5     0    0    0    0    1    1
+   s6     1    0    3    0    1    4
+
+Alcance directo a = S.u: s1=2  s2=2  s3=4  s4=2  s5=1  s6=4
+Solicitudes de mayor a menor alcance (burbuja): ['s3(4)', 's6(4)', 's1(2)', 's2(2)', 's4(2)', 's5(1)']
+Pares con módulos en común: ['s3-s6(3)', 's1-s2(1)', 's1-s3(1)', 's1-s6(1)', 's5-s6(1)']
+Mayor superposición: s3-s6 comparten ['ASG', 'RUT', 'SEG'] -> conviene planificarlas juntas.
+Nombre del archivo (Enter = trazabilidad.json): 
+
+RC (requerimiento x componente)
+         C1   C2   C3   C4
+   R1     1    0    0    0
+   R2     1    1    0    0
+   R3     0    0    1    0
+   R4     0    0    0    1
+
+CT (componente x prueba)
+         T1   T2   T3
+   C1     1    0    0
+   C2     0    1    0
+   C3     0    0    1
+   C4     0    0    0
+
+RT = RC (.) CT (producto booleano)
+         T1   T2   T3
+   R1     1    0    0
+   R2     1    1    0
+   R3     0    0    1
+   R4     0    0    0
+
+Requerimientos sin prueba (filas nulas de RT): ['R4']
+Componentes sin prueba (filas nulas de CT): ['C4']
+Requerimientos sin componente (filas nulas de RC): []
+Componente que se modifica (Enter para omitir): C1
+Requerimientos involucrados (columna C1 de RC): ['R1', 'R2']
+Pruebas que lo verifican (fila C1 de CT): ['T1']
+Pruebas para reverificar esos requerimientos (filas de RT): ['T1', 'T2']
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 12
+Nombre del archivo (Enter = procesoPedido.json): 
+
+PROCESO ACTUAL
+
+Matriz de adyacencia del proceso (a(i,j) = 1 si j sigue a i)
+          R    V    Q    P    A    S    D    E    M    F
+    R     0    1    0    0    0    0    0    0    0    0
+    V     0    0    1    1    0    0    0    0    0    0
+    Q     0    1    0    0    0    0    0    0    0    0
+    P     0    0    0    0    1    0    0    0    0    0
+    A     0    0    0    0    0    1    1    0    0    0
+    S     0    0    0    0    0    0    1    0    0    0
+    D     0    0    0    0    0    0    0    1    0    0
+    E     0    0    0    0    0    0    0    0    1    0
+    M     0    0    0    0    0    0    0    0    0    1
+    F     0    0    0    0    0    0    0    0    0    0
+Ciclos (retrabajo o esperas): [['V', 'Q']]
+Caminos simples de R a F (la actividad 'sin dato' no suma tiempo):
+   R->V->P->A->S->D->E->M->F : 65 min, manuales 53 min = 81.5 %
+   R->V->P->A->D->E->M->F : 45 min, manuales 33 min = 73.3 %
+Archivo del proceso reingenierizado (Enter para omitir): procesoReingenierizado.json
+
+PROCESO REINGENIERIZADO
+
+Matriz de adyacencia del proceso (a(i,j) = 1 si j sigue a i)
+          R   V*   Q*   A*    D    E   M*    F
+    R     0    1    0    0    0    0    0    0
+   V*     0    0    1    1    0    0    0    0
+   Q*     0    0    0    1    0    0    0    0
+   A*     0    0    0    0    1    0    0    0
+    D     0    0    0    0    0    1    0    0
+    E     0    0    0    0    0    0    1    0
+   M*     0    0    0    0    0    0    0    1
+    F     0    0    0    0    0    0    0    0
+El proceso es acíclico: no hay retrabajo.
+Caminos simples de R a F (la actividad 'sin dato' no suma tiempo):
+   R->V*->Q*->A*->D->E->M*->F : 14 min, manuales 0 min = 0.0 %
+   R->V*->A*->D->E->M*->F : 14 min, manuales 0 min = 0.0 %
+
+Camino más largo: 65 min -> 14 min; reducción = 78.5 %
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 13
+
+Conteos del informe
+  P1-h  Elegir 4 situaciones de 6 (no importa el orden): C(6,4) = 15
+  P2-k  5 elementos, 6 decisiones cada uno: 6^5 = 7776
+  P2-k  Base histórica solo conservar o migrar: 2 * 6^4 = 2592
+  P5-i  Pares de revisión con 6 desarrolladores: C(6,2) = 15
+  P5-i  Asignaciones (autor, revisor) distintos: V(6,2) = 30
+  P5-i  Ordenar 5 solicitudes: 5! = 120
+  P5-i  Atender 3 de 5 con orden: V(5,3) = 60
+  P5-i  Atender 3 de 5 sin orden: C(5,3) = 10
+n para un conteo propio (0 para omitir, hasta 20): 0
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 14
+¿Abrir los gráficos también en una ventana? (s/N): N
+
+Gráficos disponibles
+  1. Digrafos G y G' (dependencias, ciclos y criticidad)
+  2. Matrices de alcanzabilidad A* de G y G'
+  3. Red de distribución y camino mínimo (sin y con drones)
+  4. Rectas de costo acumulado y puntos de equilibrio
+  5. Matriz de decisión ponderada
+  6. Procesos de atención de pedidos (actual y reingenierizado)
+  7. Todos
+  0. Volver al menú principal
+Gráfico (0 a 7): 1
+Gráfico guardado en /home/claude/entrega/graficos/digrafosGyGprima.png
+
+Gráficos disponibles
+  1. Digrafos G y G' (dependencias, ciclos y criticidad)
+  2. Matrices de alcanzabilidad A* de G y G'
+  3. Red de distribución y camino mínimo (sin y con drones)
+  4. Rectas de costo acumulado y puntos de equilibrio
+  5. Matriz de decisión ponderada
+  6. Procesos de atención de pedidos (actual y reingenierizado)
+  7. Todos
+  0. Volver al menú principal
+Gráfico (0 a 7): 2
+Gráfico guardado en /home/claude/entrega/graficos/alcanzabilidadGyGprima.png
+
+Gráficos disponibles
+  1. Digrafos G y G' (dependencias, ciclos y criticidad)
+  2. Matrices de alcanzabilidad A* de G y G'
+  3. Red de distribución y camino mínimo (sin y con drones)
+  4. Rectas de costo acumulado y puntos de equilibrio
+  5. Matriz de decisión ponderada
+  6. Procesos de atención de pedidos (actual y reingenierizado)
+  7. Todos
+  0. Volver al menú principal
+Gráfico (0 a 7): 7
+Gráfico guardado en /home/claude/entrega/graficos/digrafosGyGprima.png
+Gráfico guardado en /home/claude/entrega/graficos/alcanzabilidadGyGprima.png
+Gráfico guardado en /home/claude/entrega/graficos/redDistribucion.png
+Gráfico guardado en /home/claude/entrega/graficos/costosAcumulados.png
+Gráfico guardado en /home/claude/entrega/graficos/matrizDecision.png
+Gráfico guardado en /home/claude/entrega/graficos/procesoPedidos.png
+
+Gráficos disponibles
+  1. Digrafos G y G' (dependencias, ciclos y criticidad)
+  2. Matrices de alcanzabilidad A* de G y G'
+  3. Red de distribución y camino mínimo (sin y con drones)
+  4. Rectas de costo acumulado y puntos de equilibrio
+  5. Matriz de decisión ponderada
+  6. Procesos de atención de pedidos (actual y reingenierizado)
+  7. Todos
+  0. Volver al menú principal
+Gráfico (0 a 7): 0
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 3
+
+Matriz de adyacencia A
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    0    1    0    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    0    1    0    0    0    0    0
+  ROB     0    0    1    0    0    0    0    0    0
+  ASG     0    0    1    0    0    1    0    0    0
+  RUT     0    0    0    0    0    0    1    0    0
+  SEG     0    0    0    0    1    0    0    0    0
+  ENT     1    0    0    0    0    0    1    0    0
+  REP     1    0    1    0    0    0    0    1    0
+
+Grados de cada módulo (RF-07 a RF-13)
+  PED -> entrada: 2  salida: 3
+  CLI -> entrada: 1  salida: 0
+  INV -> entrada: 4  salida: 1
+  ROB -> entrada: 1  salida: 1
+  ASG -> entrada: 2  salida: 2
+  RUT -> entrada: 1  salida: 1
+  SEG -> entrada: 2  salida: 1
+  ENT -> entrada: 1  salida: 2
+  REP -> entrada: 0  salida: 3
+Ranking de criticidad (grado de entrada, burbuja): INV(4) PED(2) ASG(2) SEG(2) CLI(1) ROB(1) RUT(1) ENT(1) REP(0) 
+Ranking de acoplamiento (grado de salida, selección): PED(3) REP(3) ASG(2) ENT(2) INV(1) RUT(1) SEG(1) ROB(1) CLI(0) 
+Más crítico (mayor grado de entrada): ['INV']
+Más acoplado (mayor grado de salida): ['PED', 'REP']
+Se pueden eliminar sin afectar a otro (grado de entrada 0): ['REP']
+
+A^2 (dependencias indirectas de longitud 2)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    0    1    1    0    1    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    0    0    0    0    0    0
+  ROB     0    0    0    1    0    0    0    0    0
+  ASG     0    0    0    1    0    0    1    0    0
+  RUT     0    0    0    0    1    0    0    0    0
+  SEG     0    0    1    0    0    1    0    0    0
+  ENT     0    1    1    0    2    0    0    0    0
+  REP     1    1    1    1    1    0    1    0    0
+
+Matriz de alcanzabilidad A* (Warshall)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    1    1    1    1    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    1    0    0    0    0    0
+  ROB     0    0    1    1    0    0    0    0    0
+  ASG     0    0    1    1    1    1    1    0    0
+  RUT     0    0    1    1    1    1    1    0    0
+  SEG     0    0    1    1    1    1    1    0    0
+  ENT     1    1    1    1    1    1    1    0    0
+  REP     1    1    1    1    1    1    1    1    0
+
+Si se modifica cada módulo, pueden verse afectados (lectura por columna):
+  PED -> ['ENT', 'REP']
+  CLI -> ['PED', 'ENT', 'REP']
+  INV -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ROB -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ASG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  RUT -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  SEG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ENT -> ['REP']
+  REP -> []
+Pares alcanzables (unos de A*): 40 - densidad: 49.4 % de 81
+Módulos en dependencias circulares (RF-17 a RF-19): ['INV', 'ROB', 'ASG', 'RUT', 'SEG']
+Grupos de módulos en el mismo ciclo: [['INV', 'ROB'], ['ASG', 'RUT', 'SEG']]
+Orden de migración: no existe porque hay ciclos.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: A
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: B
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: C
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: B
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: C
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 
+Opción inválida.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 3
+
+Matriz de adyacencia A
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    0    1    0    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    0    1    0    0    0    0    0
+  ROB     0    0    1    0    0    0    0    0    0
+  ASG     0    0    1    0    0    1    0    0    0
+  RUT     0    0    0    0    0    0    1    0    0
+  SEG     0    0    0    0    1    0    0    0    0
+  ENT     1    0    0    0    0    0    1    0    0
+  REP     1    0    1    0    0    0    0    1    0
+
+Grados de cada módulo (RF-07 a RF-13)
+  PED -> entrada: 2  salida: 3
+  CLI -> entrada: 1  salida: 0
+  INV -> entrada: 4  salida: 1
+  ROB -> entrada: 1  salida: 1
+  ASG -> entrada: 2  salida: 2
+  RUT -> entrada: 1  salida: 1
+  SEG -> entrada: 2  salida: 1
+  ENT -> entrada: 1  salida: 2
+  REP -> entrada: 0  salida: 3
+Ranking de criticidad (grado de entrada, burbuja): INV(4) PED(2) ASG(2) SEG(2) CLI(1) ROB(1) RUT(1) ENT(1) REP(0) 
+Ranking de acoplamiento (grado de salida, selección): PED(3) REP(3) ASG(2) ENT(2) INV(1) RUT(1) SEG(1) ROB(1) CLI(0) 
+Más crítico (mayor grado de entrada): ['INV']
+Más acoplado (mayor grado de salida): ['PED', 'REP']
+Se pueden eliminar sin afectar a otro (grado de entrada 0): ['REP']
+
+A^2 (dependencias indirectas de longitud 2)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    0    1    1    0    1    0    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    0    0    0    0    0    0
+  ROB     0    0    0    1    0    0    0    0    0
+  ASG     0    0    0    1    0    0    1    0    0
+  RUT     0    0    0    0    1    0    0    0    0
+  SEG     0    0    1    0    0    1    0    0    0
+  ENT     0    1    1    0    2    0    0    0    0
+  REP     1    1    1    1    1    0    1    0    0
+
+Matriz de alcanzabilidad A* (Warshall)
+        PED  CLI  INV  ROB  ASG  RUT  SEG  ENT  REP
+  PED     0    1    1    1    1    1    1    0    0
+  CLI     0    0    0    0    0    0    0    0    0
+  INV     0    0    1    1    0    0    0    0    0
+  ROB     0    0    1    1    0    0    0    0    0
+  ASG     0    0    1    1    1    1    1    0    0
+  RUT     0    0    1    1    1    1    1    0    0
+  SEG     0    0    1    1    1    1    1    0    0
+  ENT     1    1    1    1    1    1    1    0    0
+  REP     1    1    1    1    1    1    1    1    0
+
+Si se modifica cada módulo, pueden verse afectados (lectura por columna):
+  PED -> ['ENT', 'REP']
+  CLI -> ['PED', 'ENT', 'REP']
+  INV -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ROB -> ['PED', 'INV', 'ROB', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ASG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  RUT -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  SEG -> ['PED', 'ASG', 'RUT', 'SEG', 'ENT', 'REP']
+  ENT -> ['REP']
+  REP -> []
+Pares alcanzables (unos de A*): 40 - densidad: 49.4 % de 81
+Módulos en dependencias circulares (RF-17 a RF-19): ['INV', 'ROB', 'ASG', 'RUT', 'SEG']
+Grupos de módulos en el mismo ciclo: [['INV', 'ROB'], ['ASG', 'RUT', 'SEG']]
+Orden de migración: no existe porque hay ciclos.
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 9
+
+Casos de prueba (los archivos JSON deben estar en la carpeta del programa)
+Caso 1 - LOGIX original (Tabla 2)
+  OK     grados de salida
+  OK     grados de entrada
+  OK     unos de A*
+  OK     módulos en ciclos
+  OK     grupos de ciclos
+  OK     orden de migración (no existe)
+  OK     impacto de s4 (INV y ROB)
+  OK     más crítico
+  OK     más acoplados
+  OK     densidad de alcance (40 / 81)
+Caso 2 - LOGIX reestructurado con EVT
+  OK     unos de A*
+  OK     acíclico
+  OK     orden de migración
+Caso 3 - Subgrafo del anexo manual
+  OK     unos de A*
+Caso 4 - Sistema de la Tabla 6
+  OK     determinante
+  OK     clasificación
+  OK     solución x, y, z
+  OK     costo inicial de B = (4, 6, 3) . (x, y, z)
+  OK     caso límite x + y = 1 ; 2x + 2y = 3
+  OK     caso límite x + y = 1 ; 2x + 2y = 2
+Caso 5 - Puntos de equilibrio (Punto 4)
+  OK     equilibrio A-B
+  OK     equilibrio A-C
+  OK     equilibrio B-C
+  OK     más económica a los 3 años
+  OK     más económica a los 5 años
+  OK     más económica a los 10 años
+  OK     caso límite: mismo costo anual
+Caso 6 - Camino mínimo (Tabla 5)
+  OK     D a Z3
+  OK     ruta fija D-H1-Z1-Z3
+  OK     destino inexistente
+  OK     D a Z3 con corredor de drones
+Caso 7 - Matriz de decisión ponderada (Punto 4-i)
+  OK     v = P.w
+  OK     mejor alternativa
+  OK     escenario con C4 = 40 %
+  OK     peso de C4 desde el cual C supera a B
+Error: los pesos de prueba deben sumar 1 y suman 1.1
+  OK     pesos que no suman 1 se rechazan
+Caso 8 - Incidencia y superposición (Punto 1-i)
+  OK     alcance directo a = S.u
+  OK     superposición (s3, s6)
+  OK     superposición (s1, s2)
+Caso 9 - Trazabilidad (Punto 5-g y 5-h)
+  OK     RT fila R2
+  OK     requerimientos sin prueba
+  OK     componentes sin prueba
+  OK     impacto de C1
+Caso 10 - Procesos de atención de pedidos (Punto 2-h a 2-j)
+  OK     cantidad de caminos simples
+  OK     camino normal
+  OK     porcentaje manual del normal
+  OK     camino urgente
+  OK     ciclo V-Q
+  OK     proceso reingenierizado
+  OK     proceso reingenierizado acíclico
+  OK     reducción (65 - 14) / 65
+Caso 11 - Conteo (Puntos 1-h, 2-k y 5-i)
+  OK     C(6,4)
+  OK     6^5 (variaciones con repetición)
+  OK     2 . 6^4
+  OK     C(6,2)
+  OK     V(6,2)
+  OK     5!
+  OK     V(5,3)
+  OK     C(5,3)
+  OK     caso límite C(3,5)
+Caso 12 - Ciclo de tres módulos (A->B, B->C, C->A)
+  OK     un solo grupo
+Error: el módulo A depende de Z que no existe.
+  OK     dependencia inexistente se rechaza
+Caso 13 - Ordenamiento y búsqueda
+  OK     burbuja ascendente
+  OK     selección ascendente
+  OK     burbuja descendente
+  OK     el original no se modifica
+  OK     búsqueda binaria (está)
+  OK     búsqueda binaria (no está)
+  OK     búsqueda secuencial (está)
+  OK     búsqueda secuencial (no está)
+  OK     lista vacía
+Caso 14 - Gráficos (opcional)
+  OK     se creó el gráfico de los digrafos
+
+Resultado: 72 de 72 verificaciones correctas (0.28 s).
+
+================ LOGIX-Analyzer v2.0 ================
+ Módulos y dependencias
+  1. Cargar módulos desde archivo JSON (RF-01, RF-03 a RF-06)
+  2. Cargar módulos por teclado (RF-02 a RF-05)
+  3. Analizar el sistema cargado (RF-07 a RF-19, RF-35 y RF-36)
+  4. Ver módulos afectados por un cambio (RF-14 a RF-16)
+  8. Consultar un módulo (búsqueda y rankings)
+ Modelos matemáticos
+  5. Resolver un sistema de ecuaciones (RF-22 a RF-25)
+  6. Puntos de equilibrio entre alternativas (RF-28 a RF-30)
+  7. Camino mínimo en la red de distribución (RF-32 a RF-34)
+ 10. Matriz de decisión ponderada y sensibilidad (RF-42 a RF-47)
+ 11. Incidencia de solicitudes y trazabilidad (RF-48 a RF-52)
+ 12. Procesos de atención de pedidos (RF-53 a RF-58)
+ 13. Conteo: combinaciones, variaciones, permutaciones (RF-59 a RF-62)
+ Herramientas
+  9. Ejecutar los casos de prueba
+ 14. Generar gráficos (opcional, necesita matplotlib y networkx)
+  0. Salir
+Opción: 0
+Fin del programa.

@@ -1,0 +1,51 @@
+{
+  "descripcion": "Tabla 3: matriz de incidencia S (solicitudes x modulos).",
+  "solicitudes": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "modulos": [
+    "PED",
+    "CLI",
+    "INV",
+    "ROB",
+    "ASG",
+    "RUT",
+    "SEG",
+    "ENT",
+    "REP"
+  ],
+  "incidencia": {
+    "s1": [
+      "PED",
+      "ASG"
+    ],
+    "s2": [
+      "PED",
+      "CLI"
+    ],
+    "s3": [
+      "ASG",
+      "RUT",
+      "SEG",
+      "ENT"
+    ],
+    "s4": [
+      "INV",
+      "ROB"
+    ],
+    "s5": [
+      "REP"
+    ],
+    "s6": [
+      "ASG",
+      "RUT",
+      "SEG",
+      "REP"
+    ]
+  }
+}

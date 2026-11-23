@@ -1,0 +1,47 @@
+{
+  "descripcion": "Tabla 2 - LOGIX original. Cada modulo lista los modulos de los que depende (X depende de Y).",
+  "modulos": [
+    "PED",
+    "CLI",
+    "INV",
+    "ROB",
+    "ASG",
+    "RUT",
+    "SEG",
+    "ENT",
+    "REP"
+  ],
+  "dependencias": {
+    "PED": [
+      "CLI",
+      "INV",
+      "ASG"
+    ],
+    "CLI": [],
+    "INV": [
+      "ROB"
+    ],
+    "ROB": [
+      "INV"
+    ],
+    "ASG": [
+      "INV",
+      "RUT"
+    ],
+    "RUT": [
+      "SEG"
+    ],
+    "SEG": [
+      "ASG"
+    ],
+    "ENT": [
+      "PED",
+      "SEG"
+    ],
+    "REP": [
+      "PED",
+      "INV",
+      "ENT"
+    ]
+  }
+}

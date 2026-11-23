@@ -1,0 +1,50 @@
+{
+  "descripcion": "Tabla 5 - red de distribucion (grafo no dirigido, pesos en minutos).",
+  "aristas": [
+    {
+      "desde": "D",
+      "hasta": "H1",
+      "minutos": 8
+    },
+    {
+      "desde": "D",
+      "hasta": "H2",
+      "minutos": 5
+    },
+    {
+      "desde": "H1",
+      "hasta": "H2",
+      "minutos": 2
+    },
+    {
+      "desde": "H1",
+      "hasta": "Z1",
+      "minutos": 6
+    },
+    {
+      "desde": "H2",
+      "hasta": "Z1",
+      "minutos": 10
+    },
+    {
+      "desde": "H2",
+      "hasta": "Z2",
+      "minutos": 7
+    },
+    {
+      "desde": "Z1",
+      "hasta": "Z2",
+      "minutos": 3
+    },
+    {
+      "desde": "Z1",
+      "hasta": "Z3",
+      "minutos": 9
+    },
+    {
+      "desde": "Z2",
+      "hasta": "Z3",
+      "minutos": 4
+    }
+  ]
+}

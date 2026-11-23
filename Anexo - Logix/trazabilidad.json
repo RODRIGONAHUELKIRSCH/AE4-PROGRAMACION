@@ -1,0 +1,47 @@
+{
+  "descripcion": "Tablas 7 y 8: relaciones requerimiento-componente (RC) y componente-prueba (CT).",
+  "requerimientos": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "componentes": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "pruebas": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "reqComp": {
+    "R1": [
+      "C1"
+    ],
+    "R2": [
+      "C1",
+      "C2"
+    ],
+    "R3": [
+      "C3"
+    ],
+    "R4": [
+      "C4"
+    ]
+  },
+  "compPrueba": {
+    "C1": [
+      "T1"
+    ],
+    "C2": [
+      "T2"
+    ],
+    "C3": [
+      "T3"
+    ],
+    "C4": []
+  }
+}

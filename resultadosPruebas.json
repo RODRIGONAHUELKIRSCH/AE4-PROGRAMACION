@@ -104,7 +104,7 @@
  "PR-14": {
   "descripcion": "Rendimiento: ruta de Corrientes a Resistencia sobre 11124 nodos",
   "esperado": "Menos de 2 segundos",
-  "obtenido": "0.004 s por consulta",
+  "obtenido": "0.005 s por consulta",
   "ok": true
  }
 }

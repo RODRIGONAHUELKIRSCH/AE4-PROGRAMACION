@@ -1,0 +1,50 @@
+{
+  "descripcion": "G' - LOGIX reestructurado con bus de eventos EVT (sin dependencias circulares).",
+  "modulos": [
+    "PED",
+    "CLI",
+    "INV",
+    "ROB",
+    "ASG",
+    "RUT",
+    "SEG",
+    "ENT",
+    "REP",
+    "EVT"
+  ],
+  "dependencias": {
+    "PED": [
+      "CLI",
+      "INV",
+      "ASG"
+    ],
+    "CLI": [],
+    "INV": [
+      "EVT"
+    ],
+    "ROB": [
+      "EVT"
+    ],
+    "ASG": [
+      "INV",
+      "RUT",
+      "EVT"
+    ],
+    "RUT": [
+      "SEG"
+    ],
+    "SEG": [
+      "EVT"
+    ],
+    "ENT": [
+      "PED",
+      "SEG"
+    ],
+    "REP": [
+      "PED",
+      "INV",
+      "ENT"
+    ],
+    "EVT": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "descripcion": "Subgrafo del Anexo de resolucion manual (INV, ROB, ASG, RUT, SEG).",
+  "modulos": [
+    "INV",
+    "ROB",
+    "ASG",
+    "RUT",
+    "SEG"
+  ],
+  "dependencias": {
+    "INV": [
+      "ROB"
+    ],
+    "ROB": [
+      "INV"
+    ],
+    "ASG": [
+      "INV",
+      "RUT"
+    ],
+    "RUT": [
+      "SEG"
+    ],
+    "SEG": [
+      "ASG"
+    ]
+  }
+}

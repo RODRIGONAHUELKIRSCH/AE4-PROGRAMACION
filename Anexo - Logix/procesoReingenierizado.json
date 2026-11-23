@@ -1,0 +1,72 @@
+{
+  "descripcion": "Punto 2-j: proceso reingenierizado para LOGIX AUTONOMOUS (los tiempos de V*, A* y M* son supuestos del equipo).",
+  "inicio": "R",
+  "fin": "F",
+  "actividades": {
+    "R": {
+      "nombre": "Recepcion del pedido",
+      "tipo": "automatica",
+      "minutos": 2
+    },
+    "V*": {
+      "nombre": "Verificacion automatica de stock (IoT)",
+      "tipo": "automatica",
+      "minutos": 1
+    },
+    "Q*": {
+      "nombre": "Reposicion automatica en paralelo",
+      "tipo": "automatica",
+      "minutos": 0
+    },
+    "A*": {
+      "nombre": "Asignacion automatica con reglas",
+      "tipo": "automatica",
+      "minutos": 3
+    },
+    "D": {
+      "nombre": "Despacho",
+      "tipo": "automatica",
+      "minutos": 5
+    },
+    "E": {
+      "nombre": "Entrega al cliente",
+      "tipo": "sin dato",
+      "minutos": 0
+    },
+    "M*": {
+      "nombre": "Registro automatico por telemetria/QR",
+      "tipo": "automatica",
+      "minutos": 1
+    },
+    "F": {
+      "nombre": "Cierre y facturacion",
+      "tipo": "automatica",
+      "minutos": 2
+    }
+  },
+  "sucesores": {
+    "R": [
+      "V*"
+    ],
+    "V*": [
+      "A*",
+      "Q*"
+    ],
+    "Q*": [
+      "A*"
+    ],
+    "A*": [
+      "D"
+    ],
+    "D": [
+      "E"
+    ],
+    "E": [
+      "M*"
+    ],
+    "M*": [
+      "F"
+    ],
+    "F": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "descripcion": "Punto 4-i: matriz de decision ponderada P (alternativas x criterios, escala 1 a 5) y vector de pesos w. Los puntajes de C1 siguen la regla: <=750 -> 4, 751-1000 -> 3, >1000 -> 2.",
+  "criterios": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "nombresCriterios": {
+    "C1": "Costo total",
+    "C2": "Riesgo",
+    "C3": "Mantenibilidad",
+    "C4": "Evolucion",
+    "C5": "Conocimiento"
+  },
+  "pesos": {
+    "C1": 0.25,
+    "C2": 0.2,
+    "C3": 0.15,
+    "C4": 0.25,
+    "C5": 0.15
+  },
+  "puntajes": {
+    "A": {
+      "C1": 2,
+      "C2": 3,
+      "C3": 1,
+      "C4": 1,
+      "C5": 5
+    },
+    "B": {
+      "C1": 4,
+      "C2": 3,
+      "C3": 4,
+      "C4": 4,
+      "C5": 4
+    },
+    "C": {
+      "C1": 3,
+      "C2": 1,
+      "C3": 5,
+      "C4": 5,
+      "C5": 1
+    }
+  },
+  "escenarios": {
+    "Prioridad a la evolucion": {
+      "C1": 0.15,
+      "C2": 0.15,
+      "C3": 0.15,
+      "C4": 0.4,
+      "C5": 0.15
+    }
+  }
+}

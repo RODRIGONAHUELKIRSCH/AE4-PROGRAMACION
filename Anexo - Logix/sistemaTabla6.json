@@ -1,0 +1,37 @@
+{
+  "descripcion": "Tabla 6 - paquetes piloto. Incognitas: x (analisis), y (modulo reestructurado), z (integracion). Montos en miles de u.m.",
+  "incognitas": [
+    "x",
+    "y",
+    "z"
+  ],
+  "paquetes": [
+    {
+      "nombre": "Piloto 1",
+      "coeficientes": [
+        2,
+        3,
+        1
+      ],
+      "precio": 119
+    },
+    {
+      "nombre": "Piloto 2",
+      "coeficientes": [
+        1,
+        2,
+        2
+      ],
+      "precio": 122
+    },
+    {
+      "nombre": "Piloto 3",
+      "coeficientes": [
+        3,
+        1,
+        2
+      ],
+      "precio": 126
+    }
+  ]
+}

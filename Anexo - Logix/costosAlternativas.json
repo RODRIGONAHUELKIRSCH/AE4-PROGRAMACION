@@ -1,0 +1,17 @@
+{
+  "descripcion": "Costo acumulado C(n) = fijo + anual * n, en miles de u.m. (Punto 4, inciso h).",
+  "alternativas": {
+    "A": {
+      "fijo": 0,
+      "anual": 110
+    },
+    "B": {
+      "fijo": 273,
+      "anual": 45
+    },
+    "C": {
+      "fijo": 420,
+      "anual": 40
+    }
+  }
+}

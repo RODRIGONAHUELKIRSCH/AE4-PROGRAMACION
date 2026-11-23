@@ -1,0 +1,89 @@
+{
+  "descripcion": "Tabla 4: proceso actual de atencion de un pedido (digrafo de actividades).",
+  "inicio": "R",
+  "fin": "F",
+  "actividades": {
+    "R": {
+      "nombre": "Recepcion del pedido",
+      "tipo": "automatica",
+      "minutos": 2
+    },
+    "V": {
+      "nombre": "Verificacion de stock",
+      "tipo": "manual",
+      "minutos": 15
+    },
+    "Q": {
+      "nombre": "Solicitud de reposicion",
+      "tipo": "manual",
+      "minutos": 30
+    },
+    "P": {
+      "nombre": "Carga en planilla de despacho",
+      "tipo": "manual",
+      "minutos": 10
+    },
+    "A": {
+      "nombre": "Asignacion a vehiculo",
+      "tipo": "automatica",
+      "minutos": 3
+    },
+    "S": {
+      "nombre": "Aprobacion del supervisor",
+      "tipo": "manual",
+      "minutos": 20
+    },
+    "D": {
+      "nombre": "Despacho",
+      "tipo": "automatica",
+      "minutos": 5
+    },
+    "E": {
+      "nombre": "Entrega al cliente",
+      "tipo": "sin dato",
+      "minutos": 0
+    },
+    "M": {
+      "nombre": "Registro de la entrega",
+      "tipo": "manual",
+      "minutos": 8
+    },
+    "F": {
+      "nombre": "Cierre y facturacion",
+      "tipo": "automatica",
+      "minutos": 2
+    }
+  },
+  "sucesores": {
+    "R": [
+      "V"
+    ],
+    "V": [
+      "Q",
+      "P"
+    ],
+    "Q": [
+      "V"
+    ],
+    "P": [
+      "A"
+    ],
+    "A": [
+      "S",
+      "D"
+    ],
+    "S": [
+      "D"
+    ],
+    "D": [
+      "E"
+    ],
+    "E": [
+      "M"
+    ],
+    "M": [
+      "F"
+    ],
+    "F": []
+  }
+}

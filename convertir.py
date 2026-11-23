@@ -166,4 +166,4 @@ def convertirGeo(archivoEntrada, archivoSalida, zona):
     print("Grafo generado:", len(nodos), "nodos")
 
 zona = {"latMin": -27.500, "latMax": -27.415, "lonMin": -59.020, "lonMax": -58.790}
-convertirGeo("/mnt/user-data/uploads/export_1.geojson", "calles.json", zona)
+convertirGeo("export.geojson", "calles.json", zona)
